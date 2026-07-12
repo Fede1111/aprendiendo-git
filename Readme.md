@@ -110,6 +110,10 @@ Este es un proyecto abierto a la comunidad. Si quieres contribuir, ¡genial! Pue
 *   **Usa ramas para nuevas funcionalidades:** No trabajes directamente sobre la rama `main`.
 *   **Actualiza tu rama a menudo:** Sincroniza tu rama con la rama principal del proyecto (`main`) para evitar conflictos.
 
+## ✨ Características del sitio
+
+*   **Fondo animado estilo Matrix Rain:** Un canvas interactivo que muestra comandos de Git cayendo como lluvia de caracteres. El fondo responde al movimiento del mouse, iluminando las columnas cercanas al cursor.
+
 ## 📚 Recursos Adicionales
 
 *   Documentación oficial de Git: La fuente de toda la verdad.
