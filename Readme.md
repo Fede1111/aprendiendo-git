@@ -113,6 +113,40 @@ Este es un proyecto abierto a la comunidad. Si quieres contribuir, ¡genial! Pue
 ## ✨ Características del sitio
 
 *   **Fondo animado estilo Matrix Rain:** Un canvas interactivo que muestra comandos de Git cayendo como lluvia de caracteres. El fondo responde al movimiento del mouse, iluminando las columnas cercanas al cursor.
+*   **15 lecciones interactivas:** Desde fundamentos hasta comandos avanzados como rebase, cherry-pick y bisect.
+*   **Terminales simulados:** Practica comandos de Git en un entorno seguro sin riesgo de romper nada.
+*   **Quiz final con 15 preguntas:** Evalúa tus conocimientos al finalizar el tutorial.
+*   **Progreso persistente:** Tu avance se guarda automáticamente en el navegador.
+*   **Responsive:** Funciona en desktop y dispositivos móviles.
+
+## 📖 Contenido del tutorial
+
+### Fundamentos
+1. ¿Qué es Git?
+2. Configuración inicial
+3. Obtener un repositorio
+
+### Flujo de trabajo
+4. El flujo básico
+5. Mensajes de commit
+
+### Ramas y Fusiones
+6. Crear y usar ramas
+7. Fusionar ramas
+
+### Trabajo en Remoto
+8. Sincronizar con remotos
+9. Fork y Pull Request
+
+### Avanzado
+10. Git Stash
+11. Git Rebase
+12. Git Cherry-Pick
+13. Git Reset vs Revert
+14. Git Bisect
+
+### Evaluación
+15. Quiz Final
 
 ## 📚 Recursos Adicionales
 
