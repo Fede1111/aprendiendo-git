@@ -1,10 +1,10 @@
-# Aprendiendo Git y Colaborando en Comunidad 🚀
+# Aprendiendo Git y Colaborando en Comunidad →
 
 ¡Bienvenido/a a este repositorio! El objetivo principal es proporcionar un espacio para aprender los fundamentos de Git y dar los primeros pasos en el mundo de las contribuciones a proyectos de código abierto.
 
 Este documento sirve como una guía de referencia rápida y un punto de partida. ¡No dudes en proponer cambios o añadir más recursos!
 
-## 🎯 Objetivos de aprendizaje
+## ◈ Objetivos de aprendizaje
 
 *   Entender qué es Git y por qué es tan importante en el desarrollo de software.
 *   Aprender los comandos básicos de Git para el control de versiones.
@@ -23,7 +23,7 @@ Este documento sirve como una guía de referencia rápida y un punto de partida.
 *   **HEAD:** Un puntero que apunta al último commit de la rama en la que te encuentras.
 *   **Remoto (Remote):** Una versión de tu repositorio alojada en un servidor (como GitHub). `origin` es el nombre predeterminado del remoto desde el que clonaste.
 
-## ⚙️ Comandos Esenciales de Git
+## ⚙ Comandos Esenciales de Git
 
 Aquí tienes una lista de los comandos más comunes que usarás en tu día a día.
 
@@ -92,7 +92,7 @@ git pull
 git push origin nombre-de-tu-rama
 ```
 
-## 🤝 Cómo contribuir
+## ✦ Cómo contribuir
 
 Este es un proyecto abierto a la comunidad. Si quieres contribuir, ¡genial! Puedes empezar por:
 
@@ -103,14 +103,14 @@ Este es un proyecto abierto a la comunidad. Si quieres contribuir, ¡genial! Pue
 5.  Hacer **push** a tu rama en tu fork (`git push origin mi-nueva-funcionalidad`).
 5.  Abrir un **Pull Request** para que revisemos tus cambios.
 
-## ✨ Buenas Prácticas
+## ▸ Buenas Prácticas
 
 *   **Escribe mensajes de commit claros:** Un buen mensaje explica qué hace el cambio y por qué.
 *   **Crea commits pequeños y atómicos:** Cada commit debe representar una unidad lógica de trabajo.
 *   **Usa ramas para nuevas funcionalidades:** No trabajes directamente sobre la rama `main`.
 *   **Actualiza tu rama a menudo:** Sincroniza tu rama con la rama principal del proyecto (`main`) para evitar conflictos.
 
-## ✨ Características del sitio
+## ▸ Características del sitio
 
 *   **Fondo animado estilo Matrix Rain:** Un canvas interactivo que muestra comandos de Git cayendo como lluvia de caracteres. El fondo responde al movimiento del mouse, iluminando las columnas cercanas al cursor.
 *   **15 lecciones interactivas:** Desde fundamentos hasta comandos avanzados como rebase, cherry-pick y bisect.
@@ -148,7 +148,7 @@ Este es un proyecto abierto a la comunidad. Si quieres contribuir, ¡genial! Pue
 ### Evaluación
 15. Quiz Final
 
-## 📚 Recursos Adicionales
+## ▷ Recursos Adicionales
 
 *   Documentación oficial de Git: La fuente de toda la verdad.
 *   Libro Pro Git: Un libro excelente y gratuito sobre Git.

@@ -4,25 +4,25 @@ const lessons = [
     id: 'welcome',
     group: '',
     title: 'Bienvenida',
-    icon: '🏠',
+    icon: '◈',
     content: () => `
       <div class="welcome">
-        <div class="big-icon">🚀</div>
+        <div class="big-icon">→</div>
         <h2>Aprende Git desde cero</h2>
         <p>Un tutorial interactivo para dominar los fundamentos de Git, el sistema de control de versiones más usado del mundo.</p>
         <div class="welcome-features">
           <div class="welcome-feature">
-            <div class="feat-icon">📖</div>
+            <div class="feat-icon">▸</div>
             <h4>Lecciones</h4>
             <p>Contenido claro y conciso</p>
           </div>
           <div class="welcome-feature">
-            <div class="feat-icon">💻</div>
+            <div class="feat-icon">◈</div>
             <h4>Terminal</h4>
             <p>Practica comandos reales</p>
           </div>
           <div class="welcome-feature">
-            <div class="feat-icon">🎯</div>
+            <div class="feat-icon">◉</div>
             <h4>Ejercicios</h4>
             <p>Pon a prueba tus conocimientos</p>
           </div>
@@ -37,15 +37,15 @@ const lessons = [
     id: 'what-is-git',
     group: 'Fundamentos',
     title: '¿Qué es Git?',
-    icon: '📦',
+    icon: '◆',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 1 · Fundamentos</span>
-        <h2>📦 ¿Qué es Git?</h2>
+        <h2>◆ ¿Qué es Git?</h2>
         <p>Git es un <strong>sistema de control de versiones distribuido</strong>. Esto significa que mantiene un registro de los cambios realizados en archivos a lo largo del tiempo, permitiéndote volver a versiones anteriores y colaborar con otros.</p>
 
         <div class="info-box tip">
-          <strong>💡 ¿Por qué es importante?</strong><br>
+          <strong>◆ ¿Por qué es importante?</strong><br>
           Casi todos los proyectos de software profesional usan Git. Es la herramienta base para trabajar en equipo y contribuir a proyectos de código abierto.
         </div>
 
@@ -58,7 +58,7 @@ const lessons = [
         </ul>
 
         <div class="info-box">
-          <strong>🔄 Git es distribuido:</strong> A diferencia de sistemas centralizados, cada desarrollador tiene una copia completa del historial en su máquina. Esto lo hace rápido y resistente a fallos.
+          <strong>↻ Git es distribuido:</strong> A diferencia de sistemas centralizados, cada desarrollador tiene una copia completa del historial en su máquina. Esto lo hace rápido y resistente a fallos.
         </div>
       </div>
     `
@@ -67,11 +67,11 @@ const lessons = [
     id: 'setup',
     group: 'Fundamentos',
     title: 'Configuración inicial',
-    icon: '⚙️',
+    icon: '◇',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 2 · Fundamentos</span>
-        <h2>⚙️ Configuración Inicial</h2>
+        <h2>◇ Configuración Inicial</h2>
         <p>Antes de empezar a usar Git, necesitas configurar tu nombre y correo electrónico. Esta información se associa a cada commit que realices.</p>
 
         <div class="code-block">
@@ -84,7 +84,7 @@ const lessons = [
         </div>
 
         <div class="info-box warning">
-          <strong>⚠️ Nota:</strong> El flag <code>--global</code> aplica la configuración a todos los repositorios de tu máquina. Si quieres configurar solo uno, quita el flag.
+          <strong>⚠ Nota:</strong> El flag <code>--global</code> aplica la configuración a todos los repositorios de tu máquina. Si quieres configurar solo uno, quita el flag.
         </div>
 
         <h3>Prueba en la terminal</h3>
@@ -112,11 +112,11 @@ const lessons = [
     id: 'git-init-clone',
     group: 'Fundamentos',
     title: 'Obtener un repositorio',
-    icon: '📂',
+    icon: '□',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 3 · Fundamentos</span>
-        <h2>📂 Obtener un Repositorio</h2>
+        <h2>□ Obtener un Repositorio</h2>
         <p>Hay dos formas principales de empezar a trabajar con Git:</p>
 
         <h3>1. Clonar un repositorio existente</h3>
@@ -155,7 +155,7 @@ const lessons = [
         </div>
 
         <div class="info-box tip">
-          <strong>💡 Consejo:</strong> Usa <code>git clone</code> cuando quieras contribuir a un proyecto existente. Usa <code>git init</code> cuando crees algo nuevo desde cero.
+          <strong>◆ Consejo:</strong> Usa <code>git clone</code> cuando quieras contribuir a un proyecto existente. Usa <code>git init</code> cuando crees algo nuevo desde cero.
         </div>
       </div>
     `
@@ -164,11 +164,11 @@ const lessons = [
     id: 'workflow',
     group: 'Flujo de trabajo',
     title: 'El flujo básico',
-    icon: '🔄',
+    icon: '↻',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 4 · Flujo de trabajo</span>
-        <h2>🔄 El Flujo de Trabajo Básico</h2>
+        <h2>↻ El Flujo de Trabajo Básico</h2>
         <p>El flujo de Git tiene 3 zonas principales. Entenderlas es la clave para usar Git correctamente.</p>
 
         <h3>Las 3 zonas</h3>
@@ -238,16 +238,16 @@ const lessons = [
     id: 'commit-msg',
     group: 'Flujo de trabajo',
     title: 'Mensajes de commit',
-    icon: '💬',
+    icon: '▸',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 5 · Flujo de trabajo</span>
-        <h2>💬 Mensajes de Commit</h2>
+        <h2>▸ Mensajes de Commit</h2>
         <p>Un buen mensaje de commit es como un buen título: debe explicar <strong>qué</strong> hizo el cambio y <strong>por qué</strong>.</p>
 
         <h3>Buenos vs Malos mensajes</h3>
         <div class="code-block">
-          <div class="code-header"><span>❌ Malos ejemplos</span></div>
+          <div class="code-header"><span>✗ Malos ejemplos</span></div>
           <pre><span class="cmd">git</span> commit <span class="flag">-m</span> <span class="string">"fix"</span>
 <span class="cmd">git</span> commit <span class="flag">-m</span> <span class="string">"cambios"</span>
 <span class="cmd">git</span> commit <span class="flag">-m</span> <span class="string">"asdfgh"</span>
@@ -255,7 +255,7 @@ const lessons = [
         </div>
 
         <div class="code-block">
-          <div class="code-header"><span>✅ Buenos ejemplos</span></div>
+          <div class="code-header"><span>✓ Buenos ejemplos</span></div>
           <pre><span class="cmd">git</span> commit <span class="flag">-m</span> <span class="string">"Añade validación de email en formulario de registro"</span>
 <span class="cmd">git</span> commit <span class="flag">-m</span> <span class="string">"Corrige error al calcular precio con descuento"</span>
 <span class="cmd">git</span> commit <span class="flag">-m</span> <span class="string">"Refactoriza lógica de autenticación en módulo auth"</span>
@@ -278,7 +278,7 @@ const lessons = [
         </div>
 
         <div class="info-box tip">
-          <strong>💡 Regla de oro:</strong> Si tu mensaje de commit no explica el cambio por sí solo, probablemente tu commit es demasiado grande. Divídelo en commits más pequeños y atómicos.
+          <strong>◆ Regla de oro:</strong> Si tu mensaje de commit no explica el cambio por sí solo, probablemente tu commit es demasiado grande. Divídelo en commits más pequeños y atómicos.
         </div>
       </div>
     `
@@ -287,11 +287,11 @@ const lessons = [
     id: 'branches',
     group: 'Ramas y Fusiones',
     title: 'Crear y usar ramas',
-    icon: '🌿',
+    icon: '❖',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 6 · Ramas y Fusiones</span>
-        <h2>🌿 Crear y Usar Ramas</h2>
+        <h2>❖ Crear y Usar Ramas</h2>
         <p>Las ramas te permiten desarrollar funcionalidades de forma <strong>aislada</strong> sin afectar la rama principal.</p>
 
         <h3>Comandos de ramas</h3>
@@ -323,7 +323,7 @@ const lessons = [
         </div>
 
         <div class="info-box tip">
-          <strong>💡 Convención:</strong> Nombra tus ramas con un formato consistente como <code>feature/nombre</code>, <code>fix/nombre</code> o <code>hotfix/nombre</code>.
+          <strong>◆ Convención:</strong> Nombra tus ramas con un formato consistente como <code>feature/nombre</code>, <code>fix/nombre</code> o <code>hotfix/nombre</code>.
         </div>
       </div>
     `
@@ -332,11 +332,11 @@ const lessons = [
     id: 'merge',
     group: 'Ramas y Fusiones',
     title: 'Fusionar ramas',
-    icon: '🔀',
+    icon: '⇄',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 7 · Ramas y Fusiones</span>
-        <h2>🔀 Fusionar Ramas (Merge)</h2>
+        <h2>⇄ Fusionar Ramas (Merge)</h2>
         <p>Cuando terminas de trabajar en una rama, fusionas (<code>merge</code>) los cambios en otra rama (normalmente <code>main</code>).</p>
 
         <h3>Paso a paso</h3>
@@ -365,7 +365,7 @@ const lessons = [
         </div>
 
         <div class="info-box warning">
-          <strong>⚠️ Para resolver conflictos:</strong><br>
+          <strong>⚠ Para resolver conflictos:</strong><br>
           1. Abre el archivo con el conflicto<br>
           2. Elige qué versión conservar (o combínalas)<br>
           3. Elimina los marcadores de conflicto<br>
@@ -384,11 +384,11 @@ const lessons = [
     id: 'remotes',
     group: 'Trabajo en Remoto',
     title: 'Sincronizar con remotos',
-    icon: '☁️',
+    icon: '☁',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 8 · Trabajo en Remoto</span>
-        <h2>☁️ Sincronizar con Remotos</h2>
+        <h2>☁ Sincronizar con Remotos</h2>
         <p>Los repositorios remotos (como GitHub) permiten <strong>colaborar</strong> con otros. Git tiene comandos para enviar y recibir cambios.</p>
 
         <h3>Los 3 comandos clave</h3>
@@ -428,11 +428,11 @@ const lessons = [
     id: 'fork-pr',
     group: 'Trabajo en Remoto',
     title: 'Fork y Pull Request',
-    icon: '🤝',
+    icon: '✦',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 9 · Trabajo en Remoto</span>
-        <h2>🤝 Fork y Pull Request</h2>
+        <h2>✦ Fork y Pull Request</h2>
         <p>Así contribuyes a proyectos de código abierto sin tener permisos de escritura directa.</p>
 
         <h3>¿Qué es un Fork?</h3>
@@ -452,7 +452,7 @@ const lessons = [
 <span style="color:var(--text-muted)">7.</span> <span style="color:var(--green)">Code review</span> y merge de los mantenedores</div>
 
         <div class="info-box tip">
-          <strong>💡 Primera contribución:</strong> Muchos proyectos etiquetan issues como "good first issue" o "help wanted". Son perfectas para empezar a contribuir.
+          <strong>◆ Primera contribución:</strong> Muchos proyectos etiquetan issues como "good first issue" o "help wanted". Son perfectas para empezar a contribuir.
         </div>
       </div>
     `
@@ -461,11 +461,11 @@ const lessons = [
     id: 'git-stash',
     group: 'Avanzado',
     title: 'Guardar cambios temporalmente',
-    icon: '📦',
+    icon: '◆',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 10 · Avanzado</span>
-        <h2>📦 Git Stash</h2>
+        <h2>◆ Git Stash</h2>
         <p>A veces necesitas guardar cambios temporalmente sin hacer un commit. <code>git stash</code> hace exactamente eso: toma tus cambios pendientes y los guarda en una pila, dejando tu directorio de trabajo limpio.</p>
 
         <h3>¿Cuándo usar stash?</h3>
@@ -501,11 +501,11 @@ const lessons = [
         </div>
 
         <div class="info-box tip">
-          <strong>💡 Consejo:</strong> Usa <code>git stash push -m "mensaje"</code> en lugar de <code>git stash</code> simple. Cuando tengas varios stashes, los mensajes te ayudarán a identificar cuál es cuál.
+          <strong>◆ Consejo:</strong> Usa <code>git stash push -m "mensaje"</code> en lugar de <code>git stash</code> simple. Cuando tengas varios stashes, los mensajes te ayudarán a identificar cuál es cuál.
         </div>
 
         <div class="info-box warning">
-          <strong>⚠️ Precaución:</strong> <code>git stash</code> solo guarda archivos rastreados (tracked). Para incluir archivos nuevos sin rastrear, usa <code>git stash -u</code>.
+          <strong>⚠ Precaución:</strong> <code>git stash</code> solo guarda archivos rastreados (tracked). Para incluir archivos nuevos sin rastrear, usa <code>git stash -u</code>.
         </div>
 
         <h3>Practica en la terminal</h3>
@@ -532,11 +532,11 @@ const lessons = [
     id: 'git-rebase',
     group: 'Avanzado',
     title: 'Rebasar ramas',
-    icon: '🔄',
+    icon: '↻',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 11 · Avanzado</span>
-        <h2>🔄 Git Rebase</h2>
+        <h2>↻ Git Rebase</h2>
         <p><code>git rebase</code> es una alternativa a <code>git merge</code> para integrar cambios entre ramas. En lugar de crear un commit de merge, rebase "trasplanta" tus commits al final de la rama destino, creando un historial lineal.</p>
 
         <h3>Merge vs Rebase</h3>
@@ -574,7 +574,7 @@ const lessons = [
         </div>
 
         <div class="info-box warning">
-          <strong>⚠️ Regla de oro:</strong> Nunca hagas rebase en ramas que ya fueron compartidas/pusheadas. Rebase reescribe el historial, lo que puede causar problemas a otros colaboradores.
+          <strong>⚠ Regla de oro:</strong> Nunca hagas rebase en ramas que ya fueron compartidas/pusheadas. Rebase reescribe el historial, lo que puede causar problemas a otros colaboradores.
         </div>
 
         <h3>Practica en la terminal</h3>
@@ -601,11 +601,11 @@ const lessons = [
     id: 'git-cherry-pick',
     group: 'Avanzado',
     title: 'Copiar commits específicos',
-    icon: '🍒',
+    icon: '◆',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 12 · Avanzado</span>
-        <h2>🍒 Git Cherry-Pick</h2>
+        <h2>◆ Git Cherry-Pick</h2>
         <p><code>git cherry-pick</code> te permite copiar un commit específico de una rama a otra, sin fusionar toda la rama. Es útil cuando necesitas un fix rápido en otra rama.</p>
 
         <h3>¿Cuándo usar cherry-pick?</h3>
@@ -635,7 +635,7 @@ const lessons = [
         </div>
 
         <div class="info-box tip">
-          <strong>💡 Consejo:</strong> Usa <code>git log --oneline</code> para encontrar el hash del commit que quieres copiar.
+          <strong>◆ Consejo:</strong> Usa <code>git log --oneline</code> para encontrar el hash del commit que quieres copiar.
         </div>
 
         <h3>Ejemplo práctico</h3>
@@ -672,11 +672,11 @@ const lessons = [
     id: 'git-reset-revert',
     group: 'Avanzado',
     title: 'Reset vs Revert',
-    icon: '⏪',
+    icon: '◁',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 13 · Avanzado</span>
-        <h2>⏪ Git Reset vs Git Revert</h2>
+        <h2>◁ Git Reset vs Git Revert</h2>
         <p>Ambos deshacen cambios, pero de formas muy diferentes. <strong>Reset</strong> mueve el puntero HEAD (puede borrar historial). <strong>Revert</strong> crea un nuevo commit que deshace los cambios (preserva el historial).</p>
 
         <h3>Git Reset (3 modos)</h3>
@@ -709,7 +709,7 @@ const lessons = [
         </div>
 
         <div class="info-box warning">
-          <strong>⚠️ ¿Cuándo usar cuál?</strong><br>
+          <strong>⚠ ¿Cuándo usar cuál?</strong><br>
           • ¿El commit no se pusheó? → <code>git reset</code><br>
           • ¿El commit ya se pusheó / fue compartido? → <code>git revert</code>
         </div>
@@ -738,11 +738,11 @@ const lessons = [
     id: 'git-bisect',
     group: 'Avanzado',
     title: 'Encontrar bugs con bisect',
-    icon: '🔍',
+    icon: '◎',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 14 · Avanzado</span>
-        <h2>🔍 Git Bisect</h2>
+        <h2>◎ Git Bisect</h2>
         <p><code>git bisect</code> usa búsqueda binaria para encontrar automáticamente qué commit introdujo un bug. En lugar de revisar commits uno por uno, Git lo hace por ti, reduciendo el tiempo drásticamente.</p>
 
         <h3>¿Cómo funciona?</h3>
@@ -782,7 +782,7 @@ const lessons = [
         </div>
 
         <div class="info-box tip">
-          <strong>💡 Consejo:</strong> Crea un script de test que devuelva 0 si pasa y non-zero si falla. <code>git bisect run</code> lo ejecutará automáticamente.
+          <strong>◆ Consejo:</strong> Crea un script de test que devuelva 0 si pasa y non-zero si falla. <code>git bisect run</code> lo ejecutará automáticamente.
         </div>
 
         <h3>Practica en la terminal</h3>
@@ -809,11 +809,11 @@ const lessons = [
     id: 'quiz',
     group: 'Evaluación',
     title: 'Quiz final',
-    icon: '🎯',
+    icon: '◉',
     content: () => `
       <div class="lesson-content">
         <span class="lesson-badge">Lección 15 · Evaluación</span>
-        <h2>🎯 Quiz Final</h2>
+        <h2>◉ Quiz Final</h2>
         <p>Pon a prueba todo lo que has aprendido. ¡Buena suerte!</p>
         <div id="quizContainer"></div>
       </div>
@@ -824,10 +824,10 @@ const lessons = [
     id: 'complete',
     group: '',
     title: '¡Completado!',
-    icon: '🏆',
+    icon: '★',
     content: () => `
       <div class="completion-banner">
-        <div class="big-icon">🏆</div>
+        <div class="big-icon">★</div>
         <h2>¡Felicitaciones!</h2>
         <p>Has completado el tutorial de Git. Ya tienes los fundamentos para empezar a usar Git en tus proyectos y contribuir a código abierto.</p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
@@ -992,7 +992,7 @@ let quizAnswered = {};
 const terminalStates = {
   setup: {
     history: [
-      { type: 'output', text: '🔧 Terminal de práctica — Configuración de Git' },
+      { type: 'output', text: '⚙ Terminal de práctica — Configuración de Git' },
       { type: 'output', text: 'Escribe comandos git config para practicar.' },
     ],
     historyIndex: -1
@@ -1002,7 +1002,7 @@ const terminalStates = {
     staged: [],
     committed: [],
     history: [
-      { type: 'output', text: '📂 Directorio de trabajo: ~/proyecto (rama: main)' },
+      { type: 'output', text: '□ Directorio de trabajo: ~/proyecto (rama: main)' },
       { type: 'output', text: 'Practica el flujo: add → commit' },
     ],
     historyIndex: -1
@@ -1012,7 +1012,7 @@ const terminalStates = {
     stashList: [],
     files: ['app.js', 'styles.css'],
     history: [
-      { type: 'output', text: '📦 Terminal de práctica — Git Stash' },
+      { type: 'output', text: '◈ Terminal de práctica — Git Stash' },
       { type: 'output', text: 'Archivos pendientes: app.js, styles.css' },
       { type: 'output', text: 'Prueba: git stash, git stash list, git stash pop' },
     ],
@@ -1021,7 +1021,7 @@ const terminalStates = {
   rebase: {
     rebasing: false,
     history: [
-      { type: 'output', text: '🔄 Terminal de práctica — Git Rebase' },
+      { type: 'output', text: '↻ Terminal de práctica — Git Rebase' },
       { type: 'output', text: 'Rama actual: mi-feature (2 commits adelante de main)' },
       { type: 'output', text: 'Prueba: git rebase main, git rebase --abort, git rebase --continue' },
     ],
@@ -1116,7 +1116,7 @@ function renderLesson() {
   if (lesson.id === 'complete' || (currentLesson === lessons.length - 1 && completedLessons.includes('quiz'))) {
     content = `
       <div class="completion-banner">
-        <div class="big-icon">🏆</div>
+        <div class="big-icon">★</div>
         <h2>¡Felicitaciones!</h2>
         <p>Has completado el tutorial de Git. Ya tienes los fundamentos para empezar a usar Git en tus proyectos y contribuir a código abierto.</p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
@@ -1272,20 +1272,20 @@ function handleTerminalCommand(id) {
 function handleSetupCommand(cmd, state) {
   const lower = cmd.toLowerCase();
   if (lower.includes('git config') && lower.includes('user.name')) {
-    state.history.push({ type: 'output', text: '✅ Nombre configurado correctamente.' });
+    state.history.push({ type: 'output', text: '✓ Nombre configurado correctamente.' });
   } else if (lower.includes('git config') && lower.includes('user.email')) {
-    state.history.push({ type: 'output', text: '✅ Email configurado correctamente.' });
+    state.history.push({ type: 'output', text: '✓ Email configurado correctamente.' });
   } else if (lower === 'git config --global user.name "tu nombre"' || lower === "git config --global user.name 'tu nombre'") {
-    state.history.push({ type: 'output', text: '✅ Nombre configurado correctamente.' });
+    state.history.push({ type: 'output', text: '✓ Nombre configurado correctamente.' });
   } else if (lower.includes('git config') && lower.includes('user')) {
-    state.history.push({ type: 'output', text: '✅ Configuración actualizada.' });
+    state.history.push({ type: 'output', text: '✓ Configuración actualizada.' });
   } else if (lower === 'clear') {
-    state.history = [{ type: 'output', text: '🔧 Terminal limpiada.' }];
+    state.history = [{ type: 'output', text: '⚙ Terminal limpiada.' }];
   } else if (lower === 'help') {
     state.history.push({ type: 'output', text: 'Prueba: git config --global user.name "Tu Nombre"' });
     state.history.push({ type: 'output', text: 'Prueba: git config --global user.email "email@ejemplo.com"' });
   } else {
-    state.history.push({ type: 'output', text: '💡 Tip: Usa "git config --global user.name" o "help" para ver ayuda.' });
+    state.history.push({ type: 'output', text: '◆ Tip: Usa "git config --global user.name" o "help" para ver ayuda.' });
   }
 }
 
@@ -1293,7 +1293,7 @@ function handleWorkflowCommand(cmd, state) {
   const lower = cmd.toLowerCase().trim();
   if (lower === 'clear') {
     state.history = [
-      { type: 'output', text: '📂 Directorio de trabajo: ~/proyecto (rama: main)' },
+      { type: 'output', text: '□ Directorio de trabajo: ~/proyecto (rama: main)' },
     ];
     return;
   }
@@ -1317,32 +1317,32 @@ function handleWorkflowCommand(cmd, state) {
     const fname = cmd.split(/\s+/).pop();
     if (fname && !fname.startsWith('>') && !fname.startsWith('-')) {
       state.files.push(fname);
-      state.history.push({ type: 'output', text: `📄 Archivo "${fname}" creado.` });
+      state.history.push({ type: 'output', text: `□ Archivo "${fname}" creado.` });
     } else {
-      state.history.push({ type: 'output', text: '📄 Archivo creado.' });
+      state.history.push({ type: 'output', text: '□ Archivo creado.' });
     }
   } else if (lower.startsWith('git add')) {
     const target = cmd.split(/\s+/).pop();
     if (target === '.' || target === '-A') {
       state.staged.push(...state.files);
       state.files = [];
-      state.history.push({ type: 'output', text: `📦 Todos los archivos añadidos al staging.` });
+      state.history.push({ type: 'output', text: `◈ Todos los archivos añadidos al staging.` });
     } else if (state.files.includes(target)) {
       state.files = state.files.filter(f => f !== target);
       state.staged.push(target);
-      state.history.push({ type: 'output', text: `📦 "${target}" añadido al staging.` });
+      state.history.push({ type: 'output', text: `◈ "${target}" añadido al staging.` });
     } else if (state.staged.includes(target)) {
       state.history.push({ type: 'output', text: `"${target}" ya está en staging.` });
     } else {
-      state.history.push({ type: 'output', text: `⚠️ No se encontró "${target}". Usa "git status" para ver archivos.` });
+      state.history.push({ type: 'output', text: `⚠ No se encontró "${target}". Usa "git status" para ver archivos.` });
     }
   } else if (lower.startsWith('git commit')) {
     if (state.staged.length === 0) {
-      state.history.push({ type: 'output', text: '⚠️ Nothing to commit. Añade archivos con "git add" primero.' });
+      state.history.push({ type: 'output', text: '⚠ Nothing to commit. Añade archivos con "git add" primero.' });
     } else {
       const msg = cmd.match(/-m\s+["'](.+?)["']/);
       if (!msg) {
-        state.history.push({ type: 'output', text: '⚠️ Necesitas un mensaje: git commit -m "tu mensaje"' });
+        state.history.push({ type: 'output', text: '⚠ Necesitas un mensaje: git commit -m "tu mensaje"' });
       } else {
         state.committed.push({ files: [...state.staged], msg: msg[1] });
         state.history.push({ type: 'output', text: `[main ${randomHash()}] ${msg[1]}` });
@@ -1366,7 +1366,7 @@ function handleWorkflowCommand(cmd, state) {
   } else if (lower === 'help') {
     state.history.push({ type: 'output', text: 'Comandos disponibles: touch, echo, git add, git status, git commit, git log, git branch, git diff, clear' });
   } else {
-    state.history.push({ type: 'output', text: `💡 Comando no simulado: "${cmd}". Escribe "help" para ver comandos disponibles.` });
+    state.history.push({ type: 'output', text: `◆ Comando no simulado: "${cmd}". Escribe "help" para ver comandos disponibles.` });
   }
 }
 
@@ -1376,13 +1376,13 @@ function handleStashCommand(cmd, state) {
     state.stashCount = 0;
     state.stashList = [];
     state.history = [
-      { type: 'output', text: '📦 Terminal limpiada.' },
+      { type: 'output', text: '◈ Terminal limpiada.' },
     ];
     return;
   }
   if (lower === 'git stash' || lower === 'git stash push') {
     if (state.files.length === 0) {
-      state.history.push({ type: 'output', text: '⚠️ No hay cambios para guardar.' });
+      state.history.push({ type: 'output', text: '⚠ No hay cambios para guardar.' });
     } else {
       state.stashCount++;
       const msg = `WIP on main: ${state.stashCount} stash(es)`;
@@ -1405,20 +1405,20 @@ function handleStashCommand(cmd, state) {
     }
   } else if (lower === 'git stash pop') {
     if (state.stashList.length === 0) {
-      state.history.push({ type: 'output', text: '⚠️ No hay stash para recuperar.' });
+      state.history.push({ type: 'output', text: '⚠ No hay stash para recuperar.' });
     } else {
       const popped = state.stashList.pop();
       state.history.push({ type: 'output', text: `Dropped stash@{${state.stashList.length}} (${popped.msg})` });
     }
   } else if (lower === 'git stash apply') {
     if (state.stashList.length === 0) {
-      state.history.push({ type: 'output', text: '⚠️ No hay stash para aplicar.' });
+      state.history.push({ type: 'output', text: '⚠ No hay stash para aplicar.' });
     } else {
       state.history.push({ type: 'output', text: `Applied stash@{${state.stashList.length - 1}} exitosamente.` });
     }
   } else if (lower.startsWith('git stash drop')) {
     if (state.stashList.length === 0) {
-      state.history.push({ type: 'output', text: '⚠️ No hay stash para eliminar.' });
+      state.history.push({ type: 'output', text: '⚠ No hay stash para eliminar.' });
     } else {
       state.stashList.pop();
       state.history.push({ type: 'output', text: 'Stash eliminado.' });
@@ -1429,7 +1429,7 @@ function handleStashCommand(cmd, state) {
   } else if (lower === 'help') {
     state.history.push({ type: 'output', text: 'Comandos: git stash, git stash push -m "msg", git stash list, git stash pop, git stash apply, git stash drop, git stash clear, clear' });
   } else {
-    state.history.push({ type: 'output', text: `💡 Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
+    state.history.push({ type: 'output', text: `◆ Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
   }
 }
 
@@ -1438,7 +1438,7 @@ function handleRebaseCommand(cmd, state) {
   if (lower === 'clear') {
     state.rebasing = false;
     state.history = [
-      { type: 'output', text: '🔄 Terminal limpiada.' },
+      { type: 'output', text: '↻ Terminal limpiada.' },
     ];
     return;
   }
@@ -1460,14 +1460,14 @@ function handleRebaseCommand(cmd, state) {
       state.rebasing = false;
       state.history.push({ type: 'output', text: 'Rebase abortado. Volviendo al estado anterior.' });
     } else {
-      state.history.push({ type: 'output', text: '⚠️ No hay rebase en progreso.' });
+      state.history.push({ type: 'output', text: '⚠ No hay rebase en progreso.' });
     }
   } else if (lower === 'git rebase --continue') {
     if (state.rebasing) {
       state.rebasing = false;
       state.history.push({ type: 'output', text: 'Rebase completado exitosamente.' });
     } else {
-      state.history.push({ type: 'output', text: '⚠️ No hay rebase en progreso.' });
+      state.history.push({ type: 'output', text: '⚠ No hay rebase en progreso.' });
     }
   } else if (lower === 'git log --oneline -5' || lower === 'git log') {
     state.history.push({ type: 'output', text: '<span style="color:var(--orange)">f9g0h1i</span> feat: añade panel admin' });
@@ -1476,7 +1476,7 @@ function handleRebaseCommand(cmd, state) {
   } else if (lower === 'help') {
     state.history.push({ type: 'output', text: 'Comandos: git rebase main, git rebase -i main, git rebase --abort, git rebase --continue, git log, clear' });
   } else {
-    state.history.push({ type: 'output', text: `💡 Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
+    state.history.push({ type: 'output', text: `◆ Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
   }
 }
 
@@ -1500,7 +1500,7 @@ function handleCherryPickCommand(cmd, state) {
       state.history.push({ type: 'output', text: `[main ${randomHash()}] ${commits[hash]}` });
       state.history.push({ type: 'output', text: ` 1 file changed, 15 insertions(+), 2 deletions(-)` });
     } else {
-      state.history.push({ type: 'output', text: `⚠️ Commit "${hash}" no encontrado.` });
+      state.history.push({ type: 'output', text: `⚠ Commit "${hash}" no encontrado.` });
     }
   } else if (lower === 'git cherry-pick --abort') {
     state.history.push({ type: 'output', text: 'Cherry-pick abortado.' });
@@ -1511,7 +1511,7 @@ function handleCherryPickCommand(cmd, state) {
   } else if (lower === 'help') {
     state.history.push({ type: 'output', text: 'Comandos: git cherry-pick <hash>, git cherry-pick --abort, git log, clear' });
   } else {
-    state.history.push({ type: 'output', text: `💡 Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
+    state.history.push({ type: 'output', text: `◆ Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
   }
 }
 
@@ -1524,11 +1524,11 @@ function handleResetCommand(cmd, state) {
     return;
   }
   if (lower.includes('git reset --soft')) {
-    state.history.push({ type: 'output', text: '✅ HEAD movido. Cambios conservados en staging area.' });
+    state.history.push({ type: 'output', text: '✓ HEAD movido. Cambios conservados en staging area.' });
   } else if (lower.includes('git reset --mixed') || lower === 'git reset') {
-    state.history.push({ type: 'output', text: '✅ HEAD movido. Cambios en directorio de trabajo (sin staging).' });
+    state.history.push({ type: 'output', text: '✓ HEAD movido. Cambios en directorio de trabajo (sin staging).' });
   } else if (lower.includes('git reset --hard')) {
-    state.history.push({ type: 'output', text: '⚠️ HEAD movido. Todos los cambios fueron DESCARTADOS.' });
+    state.history.push({ type: 'output', text: '⚠ HEAD movido. Todos los cambios fueron DESCARTADOS.' });
     state.history.push({ type: 'output', text: '<span style="color:var(--red)">¡Cuidado! Esta acción no se puede deshacer.</span>' });
   } else if (lower.startsWith('git revert')) {
     const parts = cmd.split(/\s+/);
@@ -1536,9 +1536,9 @@ function handleResetCommand(cmd, state) {
     if (hash && hash !== 'git') {
       state.history.push({ type: 'output', text: `[main ${randomHash()}] Revert "${hash}"` });
       state.history.push({ type: 'output', text: ' 1 file changed, 3 insertions(+), 15 deletions(-)' });
-      state.history.push({ type: 'output', text: '✅ Commit de revert creado. El historial se preserva.' });
+      state.history.push({ type: 'output', text: '✓ Commit de revert creado. El historial se preserva.' });
     } else {
-      state.history.push({ type: 'output', text: '⚠️ Necesitas especificar un hash: git revert a1b2c3d' });
+      state.history.push({ type: 'output', text: '⚠ Necesitas especificar un hash: git revert a1b2c3d' });
     }
   } else if (lower === 'git log --oneline -5' || lower === 'git log') {
     state.history.push({ type: 'output', text: '<span style="color:var(--orange)">i7j8k9l</span> feat: añade panel admin' });
@@ -1547,7 +1547,7 @@ function handleResetCommand(cmd, state) {
   } else if (lower === 'help') {
     state.history.push({ type: 'output', text: 'Comandos: git reset --soft/mixed/hard HEAD~1, git revert <hash>, git log, clear' });
   } else {
-    state.history.push({ type: 'output', text: `💡 Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
+    state.history.push({ type: 'output', text: `◆ Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
   }
 }
 
@@ -1567,7 +1567,7 @@ function handleBisectCommand(cmd, state) {
     state.history.push({ type: 'output', text: 'Bisectando...' });
   } else if (lower === 'git bisect bad') {
     if (!state.bisecting) {
-      state.history.push({ type: 'output', text: '⚠️ Primero ejecuta: git bisect start' });
+      state.history.push({ type: 'output', text: '⚠ Primero ejecuta: git bisect start' });
     } else {
       state.badCommit = 'HEAD';
       state.history.push({ type: 'output', text: '<span style="color:var(--red)">HEAD</span> marcado como malo (tiene el bug).' });
@@ -1578,13 +1578,13 @@ function handleBisectCommand(cmd, state) {
     }
   } else if (lower.startsWith('git bisect good')) {
     if (!state.bisecting) {
-      state.history.push({ type: 'output', text: '⚠️ Primero ejecuta: git bisect start' });
+      state.history.push({ type: 'output', text: '⚠ Primero ejecuta: git bisect start' });
     } else {
       const parts = cmd.split(/\s+/);
       state.goodCommit = parts[parts.length - 1] || 'v1.0';
       state.history.push({ type: 'output', text: `<span style="color:var(--green)">${state.goodCommit}</span> marcado como bueno (sin el bug).` });
       if (state.badCommit) {
-        state.history.push({ type: 'output', text: '✅ Bisect completado!' });
+        state.history.push({ type: 'output', text: '✓ Bisect completado!' });
         state.history.push({ type: 'output', text: `<span style="color:var(--red)">a1b2c3d</span> es el commit que introdujo el bug.` });
         state.bisecting = false;
       }
@@ -1597,7 +1597,7 @@ function handleBisectCommand(cmd, state) {
   } else if (lower === 'help') {
     state.history.push({ type: 'output', text: 'Comandos: git bisect start, git bisect bad, git bisect good <hash>, git bisect reset, clear' });
   } else {
-    state.history.push({ type: 'output', text: `💡 Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
+    state.history.push({ type: 'output', text: `◆ Comando no simulado: "${cmd}". Escribe "help" para ver comandos.` });
   }
 }
 
@@ -1644,7 +1644,7 @@ function answerQuiz(qi, oi) {
 
   const feedback = document.getElementById(`quiz-feedback-${qi}`);
   feedback.className = `quiz-feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
-  feedback.textContent = (isCorrect ? '✅ Correcto! ' : '❌ Incorrecte. ') + q.explanation;
+  feedback.textContent = (isCorrect ? '✓ Correcto! ' : '✗ Incorrecte. ') + q.explanation;
 
   // Check if all answered
   const totalQ = quizData.length;

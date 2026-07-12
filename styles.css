@@ -214,6 +214,7 @@
     pointer-events: none;
     z-index: 0;
     opacity: 0.35;
+    filter: blur(1.5px);
   }
 
   .content-area::-webkit-scrollbar { width: 6px; }
