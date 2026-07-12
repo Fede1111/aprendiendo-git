@@ -50,6 +50,8 @@
     flex-direction: column;
     overflow: hidden;
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 3;
   }
 
   .sidebar-header {
@@ -169,6 +171,8 @@
     border-bottom: 1px solid var(--border);
     background: var(--bg-secondary);
     min-height: 52px;
+    position: relative;
+    z-index: 2;
   }
 
   .topbar-title {
@@ -205,6 +209,18 @@
     flex: 1;
     overflow-y: auto;
     padding: 32px;
+    position: relative;
+  }
+
+  #matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-w);
+    width: calc(100vw - var(--sidebar-w));
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.35;
   }
 
   .content-area::-webkit-scrollbar { width: 6px; }
@@ -215,6 +231,8 @@
     max-width: 760px;
     margin: 0 auto;
     animation: fadeIn 0.3s ease;
+    position: relative;
+    z-index: 1;
   }
 
   @keyframes fadeIn {
@@ -270,6 +288,8 @@
     border-radius: 10px;
     margin: 16px 0;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
   }
 
   .code-header {
@@ -318,6 +338,8 @@
     margin: 16px 0;
     font-size: 0.88rem;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
   }
 
   .info-box.warning {
@@ -339,6 +361,8 @@
     border-radius: 10px;
     margin: 16px 0;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
   }
 
   .terminal-header {
@@ -416,6 +440,8 @@
     margin: 20px 0;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    z-index: 1;
   }
 
   .git-zone {
@@ -469,6 +495,8 @@
     border-radius: 12px;
     padding: 24px;
     margin: 16px 0;
+    position: relative;
+    z-index: 1;
   }
 
   .quiz-question {
@@ -519,12 +547,16 @@
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
   }
 
   .completion-banner {
     text-align: center;
     padding: 40px;
     animation: fadeIn 0.5s ease;
+    position: relative;
+    z-index: 1;
   }
 
   .completion-banner .big-icon { font-size: 4rem; margin-bottom: 16px; }
@@ -536,6 +568,8 @@
     text-align: center;
     padding: 60px 20px;
     animation: fadeIn 0.5s ease;
+    position: relative;
+    z-index: 1;
   }
 
   .welcome .big-icon { font-size: 5rem; margin-bottom: 20px; }
@@ -630,6 +664,8 @@
     </div>
   </main>
 </div>
+
+<canvas id="matrixCanvas"></canvas>
 
 <script>
 // ── Lesson Data ──
@@ -1571,6 +1607,121 @@ document.addEventListener('keydown', e => {
     prevLesson();
   }
 });
+
+// ── Matrix Rain Background ──
+(function initMatrix() {
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+
+  const gitCommands = [
+    'git add', 'git commit', 'git push', 'git pull', 'git clone',
+    'git merge', 'git branch', 'git checkout', 'git init', 'git status',
+    'git fetch', 'git rebase', 'git stash', 'git log', 'git diff',
+    'git remote', 'git tag', 'git reset', 'git revert', 'git config',
+    'HEAD', 'origin/main', 'fast-forward', 'conflict', 'stage',
+    'working dir', 'repository', 'fork', 'PR', 'main', 'develop',
+    '-b feature', '-m "feat:"', 'git switch', 'git restore',
+    'git clean', 'git blame', 'git shortlog', 'git describe',
+  ];
+
+  const fontSize = 14;
+  let columns, drops, chars, speeds, bright;
+  let mouseX = -1000, mouseY = -1000;
+  const mouseRadius = 120;
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    const oldDrops = drops || [];
+    drops = [];
+    chars = [];
+    speeds = [];
+    bright = [];
+    for (let i = 0; i < columns; i++) {
+      drops[i] = oldDrops[i] || Math.random() * -100;
+      chars[i] = gitCommands[Math.floor(Math.random() * gitCommands.length)];
+      speeds[i] = 0.3 + Math.random() * 0.7;
+      bright[i] = 0;
+    }
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Track mouse on the whole document
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  document.addEventListener('mouseleave', () => {
+    mouseX = -1000;
+    mouseY = -1000;
+  });
+
+  function draw() {
+    // Fade trail
+    ctx.fillStyle = 'rgba(13, 17, 23, 0.08)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = `${fontSize}px 'JetBrains Mono', monospace`;
+
+    for (let i = 0; i < columns; i++) {
+      const x = i * fontSize;
+      const y = drops[i] * fontSize;
+
+      // Mouse interaction: brighten nearby columns
+      const canvasLeft = canvas.getBoundingClientRect().left;
+      const dx = x + fontSize / 2 - (mouseX - canvasLeft);
+      const dy = y - mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < mouseRadius) {
+        bright[i] = Math.min(bright[i] + 0.15, 1);
+      } else {
+        bright[i] *= 0.97;
+      }
+
+      // Randomly change the command text
+      if (Math.random() > 0.98) {
+        chars[i] = gitCommands[Math.floor(Math.random() * gitCommands.length)];
+      }
+
+      const cmd = chars[i];
+
+      // Draw the command
+      if (bright[i] > 0.1) {
+        // Bright / mouse-proximate
+        const g = Math.floor(185 + 70 * bright[i]);
+        const b = Math.floor(80 + 175 * bright[i]);
+        ctx.fillStyle = `rgba(88, ${g}, ${b}, ${0.7 + bright[i] * 0.3})`;
+      } else {
+        // Normal dim green
+        const alpha = 0.15 + Math.random() * 0.1;
+        ctx.fillStyle = `rgba(63, 185, 80, ${alpha})`;
+      }
+
+      // Clip to canvas bounds
+      if (y > -fontSize && y < canvas.height + fontSize) {
+        ctx.fillText(cmd, x, y);
+      }
+
+      // Reset drop when it goes off screen
+      if (y > canvas.height + Math.random() * 500) {
+        drops[i] = Math.random() * -20;
+        chars[i] = gitCommands[Math.floor(Math.random() * gitCommands.length)];
+        speeds[i] = 0.3 + Math.random() * 0.7;
+      }
+
+      drops[i] += speeds[i];
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+})();
 
 init();
 </script>
